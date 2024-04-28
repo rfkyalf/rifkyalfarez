@@ -13,12 +13,12 @@ export default function AboutSection() {
         Hi, I&apos;m Rifky Alfarez
       </h1>
       <p className="text-base text-gray-800 text-justify">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
-        doloremque quo odio! Laboriosam, tempore! Nemo, fugiat! Asperiores
-        molestiae, consequatur delectus vel sapiente autem, cupiditate inventore
-        tempore accusamus reiciendis porro minima iure blanditiis illo. Tempora
-        dolore ipsa vero iusto necessitatibus deserunt voluptatem laboriosam,
-        repellendus, inventore nesciunt aut, eos officiis qui incidunt?
+        A third-year student majoring in informatics engineering with an
+        interest in Frontend Development. Mastering several frontend
+        technologies such as Tailwind CSS, React.js, Next.js, and others. Also,
+        have a basic understanding of backend development such as Express.js and
+        MongoDB. A high spirit of learning and a desire to keep growing makes me
+        always ready to face new challenges.
       </p>
       <div className="flex justify-between">
         <div className="flex gap-2">
@@ -31,14 +31,12 @@ export default function AboutSection() {
               className="text-blue-700 hover:text-blue-500"
             />
           </Link>
-
           <Link href="https://github.com/rrifky" target="_blank">
             <FaSquareGithub
               size={30}
               className="text-gray-800 hover:text-gray-500"
             />
           </Link>
-
           <Link href="https://www.instagram.com/rfkyalf/" target="_blank">
             <FaSquareInstagram
               size={30}

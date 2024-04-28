@@ -1,7 +1,16 @@
+import { FaPaperPlane } from 'react-icons/fa6';
+import SectionHeader from '../section-header';
+import ContactForm from './contact-form';
+
 export default function ContactSection() {
   return (
-    <section className="flex flex-col gap-4 border-b border-gray-200 pb-8">
-      <h1 className="text-2xl font-bold text-gray-950 mt-8">Contact</h1>
+    <section className="flex flex-col gap-4 pb-8">
+      <SectionHeader
+        name="Contact"
+        desc="Get in touch with me"
+        Icon={FaPaperPlane}
+      />
+      <ContactForm />
     </section>
   );
 }

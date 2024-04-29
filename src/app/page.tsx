@@ -6,7 +6,7 @@ import TechStacksSection from '@/components/tech/tech-section';
 
 export default function Home() {
   return (
-    <main className="w-[880px] mx-auto mt-8">
+    <main className="w-[880px] mx-auto mt-16">
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />

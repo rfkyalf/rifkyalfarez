@@ -99,7 +99,8 @@ export default function ContactForm() {
             },
           })}
           className={`px-4 py-2 rounded-xl bg-transparent shadow outline-none transition-shadow duration-300 ease-in-out focus:shadow-md text-gray-950 ${
-            errors.name && 'shadow-red-500 focus:shadow-red-500'
+            errors.name &&
+            'shadow-red-500 focus:shadow-red-500 placeholder-red-500'
           }`}
         />
         {errors.name && (
@@ -125,7 +126,8 @@ export default function ContactForm() {
             },
           })}
           className={`px-4 py-2 rounded-xl bg-transparent shadow outline-none transition-shadow duration-300 ease-in-out focus:shadow-md text-gray-950 ${
-            errors.email && 'shadow-red-500 focus:shadow-red-500'
+            errors.email &&
+            'shadow-red-500 focus:shadow-red-500 placeholder-red-500'
           }`}
         />
         {errors.email && (
@@ -150,7 +152,8 @@ export default function ContactForm() {
             },
           })}
           className={`px-4 py-2 rounded-xl bg-transparent shadow outline-none transition-shadow duration-300 ease-in-out focus:shadow-md text-gray-950 ${
-            errors.message && 'shadow-red-500 focus:shadow-red-500'
+            errors.message &&
+            'shadow-red-500 focus:shadow-red-500 placeholder-red-500'
           }`}
         />
         {errors.message && (

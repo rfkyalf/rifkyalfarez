@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .placeholder-red-500::placeholder {
+    @apply text-red-500;
+  }
+}

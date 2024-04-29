@@ -22,7 +22,7 @@ export default function TechStacksSection() {
         desc="The tech stack I use"
         Icon={FaCode}
       />
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-8">
         <div className="w-56 shadow-md p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
           <Image
             src="/images/tech/prog.png"
@@ -34,7 +34,7 @@ export default function TechStacksSection() {
           <h1 className="mb-4 text-base font-semibold text-gray-950">
             Programming Language
           </h1>
-          <div className="grid grid-cols-2 justify-items-center content-center gap-2">
+          <div className="grid grid-cols-2 justify-items-center content-center gap-8">
             <SiJavascript
               size={50}
               className="text-yellow-500 cursor-pointer hover:text-yellow-400"
@@ -58,7 +58,7 @@ export default function TechStacksSection() {
           <h1 className="mb-4 text-base font-semibold text-gray-950">
             Frontend
           </h1>
-          <div className="grid grid-cols-2 justify-items-center content-center gap-2">
+          <div className="grid grid-cols-2 justify-items-center content-center gap-8">
             <FaBootstrap
               size={50}
               className="text-violet-700 cursor-pointer hover:text-violet-600"
@@ -92,7 +92,7 @@ export default function TechStacksSection() {
           <h1 className="mb-4 text-base font-semibold text-gray-950">
             Backend
           </h1>
-          <div className="grid grid-cols-2 justify-items-center content-center gap-2">
+          <div className="grid grid-cols-2 justify-items-center content-center gap-8">
             <FaNodeJs
               size={50}
               className="text-lime-500 cursor-pointer hover:text-lime-400"
@@ -116,7 +116,7 @@ export default function TechStacksSection() {
           <h1 className="mb-4 text-base font-semibold text-gray-950">
             Databases
           </h1>
-          <div className="grid grid-cols-2 justify-items-center content-center gap-2">
+          <div className="grid grid-cols-2 justify-items-center content-center gap-8">
             <SiMysql
               size={50}
               className="text-blue-600 cursor-pointer hover:text-blue-500"
@@ -143,7 +143,7 @@ export default function TechStacksSection() {
             className="h-40 w-40 absolute -top-5 -left-5 -z-10 opacity-5"
           />
           <h1 className="mb-4 text-base font-semibold text-gray-950">Tools</h1>
-          <div className="grid grid-cols-2 justify-items-center content-center gap-2">
+          <div className="grid grid-cols-2 justify-items-center content-center gap-8">
             <FaGitAlt
               size={50}
               className="text-red-600 cursor-pointer hover:text-red-500"

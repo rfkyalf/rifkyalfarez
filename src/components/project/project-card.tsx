@@ -28,7 +28,7 @@ export default async function ProjectCard() {
             height={1000}
             className="w-full h-[200px] object-cover"
           />
-          <div className="px-4 py-2">
+          <div className="px-6 py-4">
             <h1 className="text-gray-950 text-base font-semibold">
               {item.name}
             </h1>

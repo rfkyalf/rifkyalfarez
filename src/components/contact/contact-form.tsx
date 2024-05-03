@@ -1,9 +1,9 @@
 'use client';
 
-import { useForm } from 'react-hook-form';
-import Alert from './alert';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { PulseLoader } from 'react-spinners';
+import Alert from './alert';
 
 interface FormInput {
   name: string;
@@ -67,7 +67,7 @@ export default function ContactForm() {
     >
       {success && (
         <Alert
-          bg="bg-green-400"
+          bg="shadow-md shadow-green-400"
           status="✅"
           message="Success, your message sent successfully"
           onClick={removeAlert}
@@ -76,7 +76,7 @@ export default function ContactForm() {
 
       {error && (
         <Alert
-          bg="bg-red-400"
+          bg="shadow-md shadow-red-400"
           status="❌"
           message="Something went wrong, please try again"
           onClick={removeAlert}
@@ -89,6 +89,10 @@ export default function ContactForm() {
           placeholder="Name"
           {...register('name', {
             required: 'Please enter your name',
+            pattern: {
+              value: /\S+/,
+              message: 'Name can not be blank',
+            },
             minLength: {
               value: 3,
               message: 'Name must be at least 3 characters',
@@ -142,6 +146,10 @@ export default function ContactForm() {
           rows={5}
           {...register('message', {
             required: 'Please enter your message',
+            pattern: {
+              value: /\S+/,
+              message: 'Name can not be blank',
+            },
             minLength: {
               value: 3,
               message: 'Message must be at least 3 characters',

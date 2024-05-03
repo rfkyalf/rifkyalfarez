@@ -9,17 +9,17 @@ const data = [
     tech: [
       {
         tech_id: 1,
-        tech_image: '/icons/ts.png',
+        tech_image: '/icons/tech/ts.png',
         tech_name: 'TypeScript',
       },
       {
         tech_id: 2,
-        tech_image: '/icons/tailwindcss.png',
+        tech_image: '/icons/tech/tailwindcss.png',
         tech_name: 'Tailwind CSS',
       },
       {
         tech_id: 3,
-        tech_image: '/icons/nextjs.png',
+        tech_image: '/icons/tech/nextjs.png',
         tech_name: 'Next.js',
       },
     ],
@@ -32,22 +32,22 @@ const data = [
     tech: [
       {
         tech_id: 1,
-        tech_image: '/icons/ts.png',
+        tech_image: '/icons/tech/ts.png',
         tech_name: 'TypeScript',
       },
       {
         tech_id: 2,
-        tech_image: '/icons/tailwindcss.png',
+        tech_image: '/icons/tech/tailwindcss.png',
         tech_name: 'Tailwind CSS',
       },
       {
         tech_id: 3,
-        tech_image: '/icons/nextjs.png',
+        tech_image: '/icons/tech/nextjs.png',
         tech_name: 'Next.js',
       },
       {
         tech_id: 4,
-        tech_image: '/icons/shadcdn.png',
+        tech_image: '/icons/tech/shadcdn.png',
         tech_name: 'Shadcn/ui',
       },
     ],

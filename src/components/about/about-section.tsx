@@ -1,4 +1,4 @@
-import { selfDescription } from '@/constants/about';
+import { selfDescription } from '@/constants';
 import { Resume, SocialMedia } from './social';
 
 export default function AboutSection() {

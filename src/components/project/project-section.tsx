@@ -1,6 +1,8 @@
 import { FaDiagramProject } from 'react-icons/fa6';
 import SectionHeader from '../section-header';
 import ProjectCard from './project-card';
+import LoadingCardProject from './loading';
+import { Suspense } from 'react';
 
 export default function ProjectsSection() {
   return (
@@ -10,7 +12,9 @@ export default function ProjectsSection() {
         desc="Implementation of my skills into personal and real projects"
         Icon={FaDiagramProject}
       />
-      <ProjectCard />
+      <Suspense fallback={<LoadingCardProject />}>
+        <ProjectCard />
+      </Suspense>
     </section>
   );
 }

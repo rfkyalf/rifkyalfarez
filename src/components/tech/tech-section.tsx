@@ -23,7 +23,7 @@ export default function TechStacksSection() {
         Icon={FaCode}
       />
       <div className="grid grid-cols-3 gap-8">
-        <div className="w-56 shadow-md p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
+        <div className=" shadow-md p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
           <Image
             src="/images/tech/prog.png"
             alt="Programming Language"
@@ -47,7 +47,7 @@ export default function TechStacksSection() {
             />
           </div>
         </div>
-        <div className="w-56 shadow-md p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
+        <div className=" shadow-md p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
           <Image
             src="/images/tech/frontend.png"
             alt="Frontend"
@@ -81,7 +81,7 @@ export default function TechStacksSection() {
             />
           </div>
         </div>
-        <div className="w-56 shadow-md p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
+        <div className=" shadow-md p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
           <Image
             src="/images/tech/backend.png"
             alt="Backend"
@@ -105,7 +105,7 @@ export default function TechStacksSection() {
             />
           </div>
         </div>
-        <div className="w-56 shadow-md p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
+        <div className=" shadow-md p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
           <Image
             src="/images/tech/databases.png"
             alt="Databases"
@@ -134,7 +134,7 @@ export default function TechStacksSection() {
             />
           </div>
         </div>
-        <div className="w-56 shadow-md p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
+        <div className=" shadow-md p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
           <Image
             src="/images/tech/tools.png"
             alt="Tools"

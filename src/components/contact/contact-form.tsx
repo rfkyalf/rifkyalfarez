@@ -50,9 +50,15 @@ export default function ContactForm() {
         }
       );
       setSuccess(true);
+      setTimeout(() => {
+        setSuccess(false);
+      }, 5000);
       reset();
     } catch (error) {
       setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 5000);
     } finally {
       setLoading(false);
       setShowButton(true);
@@ -148,14 +154,14 @@ export default function ContactForm() {
             required: 'Please enter your message',
             pattern: {
               value: /\S+/,
-              message: 'Name can not be blank',
+              message: 'Message can not be blank',
             },
             minLength: {
               value: 3,
               message: 'Message must be at least 3 characters',
             },
             maxLength: {
-              value: 200,
+              value: 500,
               message: 'Message must not exceed 500 characters',
             },
           })}

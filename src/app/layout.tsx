@@ -6,7 +6,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://rifkyalfarez.vercel.app'),
+  metadataBase: new URL(`${process.env.BASE_URL}`),
   keywords: [
     'rifky',
     'rifky alfarez',

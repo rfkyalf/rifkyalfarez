@@ -1,8 +1,7 @@
 export default function sitemap() {
-  const baseUrl = 'http://localhost:3000';
   return [
     {
-      url: baseUrl,
+      url: `${process.env.BASE_URL}`,
       lastModified: new Date(),
     },
   ];

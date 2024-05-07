@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { FaFileLines } from 'react-icons/fa6';
 
 export async function SocialMedia() {
-  const res = await fetch('http://localhost:3000/api/about', {
+  const res = await fetch(`${process.env.BASE_URL}api/about`, {
     cache: 'force-cache',
   });
   const data = await res.json();

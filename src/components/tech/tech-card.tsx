@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 export default async function TechCard() {
-  const res = await fetch(`http://localhost:5000/api/stacks`, {
+  const res = await fetch(`${process.env.API_URL}api/stacks`, {
     cache: 'force-cache',
   });
 

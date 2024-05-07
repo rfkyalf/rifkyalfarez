@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const getProject = async (id: string) => {
   try {
-    const res = await fetch(`http://localhost:5000/api/projects/${id}`, {
+    const res = await fetch(`${process.env.API_URL}api/projects/${id}`, {
       cache: 'force-cache',
     });
     return await res.json();

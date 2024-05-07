@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default async function ExperienceCard() {
-  const res = await fetch(`http://localhost:5000/api/experiences`, {
+  const res = await fetch(`${process.env.API_URL}api/experiences`, {
     cache: 'force-cache',
   });
   const experience = await res.json();

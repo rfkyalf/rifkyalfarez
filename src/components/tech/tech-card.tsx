@@ -10,7 +10,7 @@ export default async function TechCard() {
   const data = await res.json();
   const tech = data.data;
 
-  if (tech.lenght === 0) {
+  if (tech.length === 0) {
     return <p>Tech data not found</p>;
   }
 

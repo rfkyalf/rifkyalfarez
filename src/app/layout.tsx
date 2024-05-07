@@ -6,7 +6,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://rifky-portfolio.vercel.app/'),
+  metadataBase: new URL('https://rifkyalfarez.vercel.app'),
   keywords: [
     'rifky',
     'rifky alfarez',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     description:
       'A third-year student majoring in informatics engineering with an interest in Frontend Development. Mastering several frontend technologies such as Tailwind CSS, React.js, Next.js, and others. Also, have a basic understanding of backend development such as Express.js and MongoDB. A high spirit of learning and a desire to keep growing makes me always ready to face new challenges.',
-    images: '/opengraph-image.png',
+    images: 'og.png',
   },
 };
 

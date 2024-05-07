@@ -2,6 +2,16 @@ import LoadingCardProject from '@/components/project/loading';
 import ProjectCard from '@/components/project/project-card';
 import { Suspense } from 'react';
 
+export const metadata = {
+  title: 'Projects',
+  description: 'Implementation of my skills into personal and real projects',
+  openGraph: {
+    title: 'Projects',
+    description: 'Implementation of my skills into personal and real projects',
+    images: 'og-projects.png',
+  },
+};
+
 export default function ProjectsPage() {
   return (
     <div className="w-[880px] mx-auto mt-16 mb-[200px]">

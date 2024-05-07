@@ -1,6 +1,16 @@
 import ContactForm from '@/components/contact/contact-form';
 import LetsConnect from '@/components/contact/social-media';
 
+export const metadata = {
+  title: 'Contact',
+  description: 'Get in touch with me',
+  openGraph: {
+    title: 'Contact',
+    description: 'Get in touch with me',
+    images: 'og-contact.png',
+  },
+};
+
 export default function ContactPage() {
   return (
     <div className="w-[880px] mx-auto mt-16 mb-8">

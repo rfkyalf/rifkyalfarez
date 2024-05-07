@@ -1,25 +1,22 @@
 import Image from 'next/image';
 
 export default async function TechCard() {
-  const res = await fetch(`${process.env.BASE_URL}api/tech`, {
+  const res = await fetch(`http://localhost:5000/api/stacks`, {
     cache: 'force-cache',
-    // next: {
-    //   revalidate: 10,
-    // },
   });
-  const data = await res.json();
-  const tech = data.data;
 
-  if (tech.length === 0) {
-    return <p>Tech data not found</p>;
+  const stack = await res.json();
+
+  if (stack.length === 0) {
+    return <p>Stack data not found</p>;
   }
 
   return (
     <>
       <div className="grid grid-cols-3 gap-8">
-        {tech.map((item: any) => (
+        {stack.map((item: any) => (
           <div
-            key={item.id}
+            key={item._id}
             className="shadow-md h-56 p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
           >
             <Image
@@ -34,7 +31,7 @@ export default async function TechCard() {
             </h1>
             <div className="grid grid-cols-2 justify-items-center content-center gap-8">
               {item.tech.map((item: any) => (
-                <div key={item.tech_id}>
+                <div key={item._id}>
                   <Image
                     src={item.tech_image}
                     alt={item.tech_name}

@@ -4,13 +4,12 @@ import Image from 'next/image';
 
 const getProject = async (id: string) => {
   try {
-    const res = await fetch(`${process.env.BASE_URL}api/projects?id=${id}`, {
-      cache: 'no-store',
+    const res = await fetch(`http://localhost:5000/api/projects/${id}`, {
+      cache: 'force-cache',
     });
-    const data = await res.json();
-    return data.data;
+    return await res.json();
   } catch (error) {
-    console.log(error);
+    throw new Error('Failed to fetch project');
   }
 };
 
@@ -57,7 +56,7 @@ export default async function DetailProjectPage({ params }: any) {
           <div className="flex gap-1">
             {project?.tech?.map((item: any) => (
               <Image
-                key={item?.tech_id}
+                key={item?._id}
                 src={item?.tech_image}
                 alt={item?.tech_name}
                 title={item?.tech_name}

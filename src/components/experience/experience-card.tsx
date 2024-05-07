@@ -2,11 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default async function ExperienceCard() {
-  const res = await fetch(`${process.env.BASE_URL}api/experience`, {
+  const res = await fetch(`http://localhost:5000/api/experiences`, {
     cache: 'force-cache',
   });
-  const data = await res.json();
-  const experience = data.data;
+  const experience = await res.json();
 
   if (experience.length === 0) {
     return <p>No experience found.</p>;
@@ -16,7 +15,7 @@ export default async function ExperienceCard() {
     <div className="flex flex-wrap gap-4">
       {experience.map((item: any) => (
         <Link
-          key={item.id}
+          key={item._id}
           href="/"
           className="relative overflow-hidden flex flex-col gap-2 w-fit px-8 py-4 shadow-md rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
         >

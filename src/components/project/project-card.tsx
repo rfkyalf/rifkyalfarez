@@ -2,12 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default async function ProjectCard() {
-  const res = await fetch(`${process.env.BASE_URL}api/projects`, {
-    cache: 'no-store',
-    // next: { revalidate: 10 },
+  const res = await fetch(`http://localhost:5000/api/projects`, {
+    cache: 'force-cache',
   });
-  const data = await res.json();
-  const project = data.data;
+
+  const project = await res.json();
 
   if (project.length === 0) {
     return <p>No project found.</p>;
@@ -17,8 +16,8 @@ export default async function ProjectCard() {
     <div className="grid grid-cols-2 gap-8">
       {project.map((item: any) => (
         <Link
-          key={item.id}
-          href={`/projects/${item.id}`}
+          key={item._id}
+          href={`/projects/${item._id}`}
           className="flex flex-col shadow-md rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
         >
           <Image
@@ -38,7 +37,7 @@ export default async function ProjectCard() {
             <div className="flex items-center gap-1 mt-4">
               {item.tech.map((item: any) => (
                 <Image
-                  key={item.tech_id}
+                  key={item._id}
                   src={item.tech_image}
                   alt={item.tech_name}
                   title={item.tech_name}

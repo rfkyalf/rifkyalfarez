@@ -3,17 +3,16 @@ import Link from 'next/link';
 import { FaFileLines } from 'react-icons/fa6';
 
 export async function SocialMedia() {
-  const res = await fetch(`${process.env.BASE_URL}api/about`, {
+  const res = await fetch(`http://localhost:5000/api/abouts`, {
     cache: 'force-cache',
   });
-  const data = await res.json();
-  const social = data?.data;
+  const social = await res.json();
 
   return (
     <div className="flex gap-2">
       {social.map((item: any) => (
         <Link
-          key={item.id}
+          key={item._id}
           href={item.href}
           target="_blank"
           title={item.name}

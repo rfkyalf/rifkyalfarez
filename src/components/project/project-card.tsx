@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default async function ProjectCard() {
   const res = await fetch('http://localhost:3000/api/projects', {
-    cache: 'force-cache',
+    cache: 'no-store',
     // next: { revalidate: 10 },
   });
   const data = await res.json();
@@ -18,7 +18,7 @@ export default async function ProjectCard() {
       {project.map((item: any) => (
         <Link
           key={item.id}
-          href="/"
+          href={`/projects/${item.id}`}
           className="flex flex-col shadow-md rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
         >
           <Image

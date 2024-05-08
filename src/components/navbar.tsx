@@ -32,6 +32,7 @@ export default function Navbar() {
           <Link
             key={index}
             href={item.href}
+            title={item.name}
             className={`${
               pathname === item.href ? 'bg-gray-300' : ''
             } hover:bg-gray-300 p-2 rounded-xl transition-colors duration-300 ease-in-out`}

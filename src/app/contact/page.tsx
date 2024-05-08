@@ -5,9 +5,8 @@ export const metadata = {
   title: 'Contact',
   description: 'Get in touch with me',
   openGraph: {
-    title: 'Contact',
     description: 'Get in touch with me',
-    images: '/opengraph-image.png',
+    images: '/contact/opengraph-image.png',
   },
 };
 

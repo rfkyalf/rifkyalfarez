@@ -2,9 +2,8 @@ export const metadata = {
   title: 'About',
   description: 'Get to know more about me',
   openGraph: {
-    title: 'About',
     description: 'Get to know more about me',
-    images: '/opengraph-image.png',
+    images: '/about/opengraph-image.png',
   },
 };
 

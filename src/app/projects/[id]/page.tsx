@@ -37,8 +37,8 @@ export default async function DetailProjectPage({ params }: any) {
   const project = await getProject(params.id);
 
   return (
-    <div className="w-[880px] mx-auto mt-16 mb-8">
-      <div className="mb-8 text-base font-semibold text-gray-700">
+    <div className="w-[350px] sm:w-[620px] md:w-[748px] xl:w-[880px] mx-auto mt-20 mb-8">
+      <div className="mb-8 text-sm md:text-base font-semibold text-gray-700">
         <BackButton />
       </div>
       <div>
@@ -47,7 +47,7 @@ export default async function DetailProjectPage({ params }: any) {
           alt={project?.name}
           width={1000}
           height={1000}
-          className="w-full h-[400px] object-cover shadow-md rounded-xl"
+          className="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover shadow-md rounded-xl"
         />
       </div>
       <div className="flex justify-between items-center text-sm text-gray-800 mt-4">
@@ -67,14 +67,16 @@ export default async function DetailProjectPage({ params }: any) {
             ))}
           </div>
         </div>
-        <div className="flex items-center gap-8">
-          <p>Source Code</p>
-          <p>App Demo</p>
+        <div className="flex items-center gap-4 md:gap-8">
+          <p>Code</p>
+          <p>Demo</p>
         </div>
       </div>
       <div className="mt-8 space-y-2">
-        <h1 className="textgray-950 text-2xl font-bold">{project?.name}</h1>
-        <p className="text-base to-gray-700 text-justify leading-loose">
+        <h1 className="textgray-950 text-xl md:text-2xl font-bold">
+          {project?.name}
+        </h1>
+        <p className="text-sm md:text-base to-gray-700 text-justify leading-loose">
           {project?.desc}
         </p>
       </div>

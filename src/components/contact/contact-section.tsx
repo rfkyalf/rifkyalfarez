@@ -4,7 +4,7 @@ import ContactForm from './contact-form';
 
 export default function ContactSection() {
   return (
-    <section className="flex flex-col gap-4 pb-8">
+    <section className="flex flex-col gap-4">
       <SectionHeader
         name="Contact"
         desc="Get in touch with me"

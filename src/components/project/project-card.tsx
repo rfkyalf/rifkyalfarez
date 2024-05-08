@@ -13,7 +13,7 @@ export default async function ProjectCard() {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {project.map((item: any) => (
         <Link
           key={item._id}
@@ -25,7 +25,7 @@ export default async function ProjectCard() {
             alt={item.name}
             width={1000}
             height={1000}
-            className="w-full h-[200px] object-cover"
+            className="w-full h-[150px] md:h-[200px] object-cover"
           />
           <div className="px-6 py-4">
             <h1 className="text-gray-950 text-base font-semibold">

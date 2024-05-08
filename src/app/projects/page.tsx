@@ -13,10 +13,12 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="w-[880px] mx-auto mt-16 mb-[200px]">
+    <div className="w-[350px] sm:w-[620px] md:w-[748px] xl:w-[880px] mx-auto mt-20 mb-[200px]">
       <div className="border-b border-gray-200 pb-2">
-        <h1 className="text-gray-950 text-3xl font-bold">Projects</h1>
-        <p className="text-base text-gray-800">
+        <h1 className="text-gray-950 text-xl md:text-2xl  xl:text-3xl font-bold">
+          Projects
+        </h1>
+        <p className="text-sm md:text-base text-gray-800">
           Implementation of my skills into personal and real projects
         </p>
       </div>

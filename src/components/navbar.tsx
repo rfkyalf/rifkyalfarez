@@ -37,7 +37,10 @@ export default function Navbar() {
               pathname === item.href ? 'bg-gray-300' : ''
             } hover:bg-gray-300 p-2 rounded-xl transition-colors duration-300 ease-in-out`}
           >
-            <item.icon size={22} className="text-gray-950" />
+            <item.icon
+              size={22}
+              className="text-gray-950 w-5 h-5 md:w-6 md:h-6"
+            />
           </Link>
         ))}
       </div>

@@ -12,7 +12,7 @@ export default async function ExperienceCard() {
   }
 
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="gap-4">
       {experience.map((item: any) => (
         <Link
           key={item._id}

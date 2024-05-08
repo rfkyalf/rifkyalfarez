@@ -13,11 +13,11 @@ export default async function TechCard() {
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
         {stack.map((item: any) => (
           <div
             key={item._id}
-            className="shadow-md h-56 p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
+            className="shadow-md md:h-56 p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
           >
             <Image
               src={item.bg_image}
@@ -38,7 +38,7 @@ export default async function TechCard() {
                     title={item.tech_name}
                     width={1000}
                     height={1000}
-                    className="h-14 w-14 object-contain"
+                    className="w-10 h-10 md:h-12 md:w-12 lg:h-14 lg:w-14 object-contain"
                   />
                 </div>
               ))}

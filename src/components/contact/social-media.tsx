@@ -9,11 +9,11 @@ import {
 
 export default function LetsConnect() {
   return (
-    <div className="mt-4 grid grid-cols-5 gap-4">
+    <div className="mt-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
       <Link
         href="/"
         target="_blank"
-        className="px-4 py-2 rounded-md bg-blue-700 text-white flex items-center justify-center shadow-md gap-2 text-base font-semibold trasition-color duration-300 ease-in-out hover:bg-blue-500"
+        className="px-4 py-2 rounded-md bg-blue-700 text-white flex items-center justify-center shadow-md gap-2 text-sm md:text-base font-semibold trasition-color duration-300 ease-in-out hover:bg-blue-500"
       >
         <FaLinkedin size={20} />
         Linkedin
@@ -21,7 +21,7 @@ export default function LetsConnect() {
       <Link
         href="/"
         target="_blank"
-        className="px-4 py-2 rounded-md bg-gray-700 text-white flex items-center shadow-md justify-center gap-2 text-base font-semibold trasition-color duration-300 ease-in-out hover:bg-gray-500"
+        className="px-4 py-2 rounded-md bg-gray-700 text-white flex items-center shadow-md justify-center gap-2 text-sm md:text-base font-semibold trasition-color duration-300 ease-in-out hover:bg-gray-500"
       >
         <FaGithub size={20} />
         Github
@@ -29,7 +29,7 @@ export default function LetsConnect() {
       <Link
         href="/"
         target="_blank"
-        className="px-4 py-2 rounded-md bg-red-700 text-white flex items-center justify-center shadow-md gap-2 text-base font-semibold trasition-color duration-300 ease-in-out hover:bg-red-500"
+        className="px-4 py-2 rounded-md bg-red-700 text-white flex items-center justify-center shadow-md gap-2 text-sm md:text-base font-semibold trasition-color duration-300 ease-in-out hover:bg-red-500"
       >
         <FaEnvelope size={20} />
         Email
@@ -37,7 +37,7 @@ export default function LetsConnect() {
       <Link
         href="/"
         target="_blank"
-        className="px-4 py-2 rounded-md bg-green-700 text-white flex items-center justify-center shadow-md gap-2 text-base font-semibold trasition-color duration-300 ease-in-out hover:bg-green-500"
+        className="px-4 py-2 rounded-md bg-green-700 text-white flex items-center justify-center shadow-md gap-2 text-sm md:text-base font-semibold trasition-color duration-300 ease-in-out hover:bg-green-500"
       >
         <FaWhatsapp size={20} />
         WhatsApp
@@ -45,7 +45,7 @@ export default function LetsConnect() {
       <Link
         href="/"
         target="_blank"
-        className="px-4 py-2 rounded-md bg-rose-700 text-white flex items-center justify-center shadow-md gap-2 text-base font-semibold trasition-color duration-300 ease-in-out hover:bg-rose-500"
+        className="px-4 py-2 rounded-md bg-rose-700 text-white flex items-center justify-center shadow-md gap-2 text-sm md:text-base font-semibold trasition-color duration-300 ease-in-out hover:bg-rose-500"
       >
         <FaInstagram size={20} />
         Instagram

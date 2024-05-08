@@ -24,8 +24,7 @@ export async function SocialMedia() {
             width={100}
             height={100}
             priority
-            placeholder="empty"
-            className="h-7 w-7 "
+            className="h-6 w-6 md:h-7 md:w-7"
           />
         </Link>
       ))}
@@ -36,8 +35,11 @@ export async function SocialMedia() {
 export function Resume() {
   return (
     <Link href="/" className="group flex items-center gap-2" target="_blank">
-      <FaFileLines size={25} className="text-gray-800 group-hover:text-black" />
-      <span className="text-sm text-gray-800 group-hover:text-black group-hover:underline">
+      <FaFileLines
+        size={25}
+        className="text-gray-800 h-5 w-5 md:h-7 md:w-7 group-hover:text-black"
+      />
+      <span className="text-xs md:text-sm text-gray-800 group-hover:text-black group-hover:underline">
         Download Resume
       </span>
     </Link>

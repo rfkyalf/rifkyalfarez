@@ -6,9 +6,8 @@ export const metadata = {
   title: 'Projects',
   description: 'Implementation of my skills into personal and real projects',
   openGraph: {
-    title: 'Projects',
     description: 'Implementation of my skills into personal and real projects',
-    images: '/opengraph-image.png',
+    images: '/projects/opengraph-image.png',
   },
 };
 

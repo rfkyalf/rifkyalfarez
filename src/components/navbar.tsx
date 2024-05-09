@@ -16,6 +16,8 @@ export default function Navbar() {
       setIsScrolled(scrollPosition > 0);
     };
 
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import { IoIosPartlySunny } from 'react-icons/io';
-import { FaCloudMoon } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
+import { IoMoon, IoSunny } from 'react-icons/io5';
 
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
@@ -21,20 +20,23 @@ const ThemeSwitch = () => {
     <>
       {theme === 'dark' ? (
         <button
-          className="bg-blue-950 hover:bg-blue-900 transition-colors duration-300 text-yellow-300 rounded-2xl px-2"
+          className="hover:bg-gray-300 dark:hover:bg-gray-700 p-2 rounded-xl transition-colors duration-300 ease-in-out"
           onClick={() => setTheme('light')}
         >
           <div>
-            <FaCloudMoon size={25} />
+            <IoMoon className="text-gray-950 dark:text-gray-50 w-6 h-6 md:w-[26px] md:h-[26px]" />
           </div>
         </button>
       ) : (
         <button
-          className="bg-sky-200 hover:bg-sky-300 transition-colors duration-300 text-orange-700 rounded-2xl px-2"
+          className="hover:bg-gray-300 dark:hover:bg-gray-700 p-2 rounded-xl transition-colors duration-300 ease-in-out"
           onClick={() => setTheme('dark')}
         >
           <div>
-            <IoIosPartlySunny size={25} />
+            <IoSunny
+              size={25}
+              className="text-gray-950 dark:text-gray-50  w-6 h-6 md:w-[26px] md:h-[26px]"
+            />
           </div>
         </button>
       )}

@@ -38,7 +38,7 @@ export default async function DetailProjectPage({ params }: any) {
 
   return (
     <div className="w-[350px] sm:w-[620px] md:w-[748px] xl:w-[880px] mx-auto mt-20 mb-8">
-      <div className="mb-8 text-sm md:text-base font-semibold text-gray-700">
+      <div className="mb-8 text-sm md:text-base font-semibold text-gray-700 dark:text-gray-300">
         <BackButton />
       </div>
       <div>
@@ -50,7 +50,7 @@ export default async function DetailProjectPage({ params }: any) {
           className="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover shadow-md rounded-xl"
         />
       </div>
-      <div className="flex justify-between items-center text-sm text-gray-800 mt-4">
+      <div className="flex justify-between items-center text-sm text-gray-800 dark:text-gray-300 mt-4">
         <div className="flex gap-2 items-center">
           <p>Tech stack:</p>
           <div className="flex gap-1">
@@ -73,10 +73,10 @@ export default async function DetailProjectPage({ params }: any) {
         </div>
       </div>
       <div className="mt-8 space-y-2">
-        <h1 className="textgray-950 text-xl md:text-2xl font-bold">
+        <h1 className="textgray-950 text-xl md:text-2xl font-bold text-gray-950 dark:text-gray-50">
           {project?.name}
         </h1>
-        <p className="text-sm md:text-base to-gray-700 text-justify leading-loose">
+        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 text-justify leading-loose">
           {project?.desc}
         </p>
       </div>

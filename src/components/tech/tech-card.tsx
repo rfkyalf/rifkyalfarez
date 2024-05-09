@@ -17,7 +17,7 @@ export default async function TechCard() {
         {stack.map((item: any) => (
           <div
             key={item._id}
-            className="shadow-md md:h-56 p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
+            className="shadow-md dark:shadow-gray-500 md:h-56 p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
           >
             <Image
               src={item.bg_image}
@@ -26,7 +26,7 @@ export default async function TechCard() {
               height={1000}
               className="h-40 w-40 absolute -top-5 -left-5 -z-10 opacity-5"
             />
-            <h1 className="mb-4 text-base font-semibold text-gray-950">
+            <h1 className="mb-4 text-base font-semibold text-gray-950 dark:text-gray-50">
               {item.name}
             </h1>
             <div className="grid grid-cols-2 justify-items-center content-center gap-8">

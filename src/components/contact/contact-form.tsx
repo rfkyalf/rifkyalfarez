@@ -108,9 +108,9 @@ export default function ContactForm() {
               message: 'Name must not exceed 35 characters',
             },
           })}
-          className={`px-4 py-2 rounded-xl bg-transparent shadow outline-none transition-shadow duration-300 ease-in-out focus:shadow-md text-gray-950 ${
+          className={`px-4 py-2 rounded-xl bg-transparent shadow dark:shadow-gray-500 outline-none transition-shadow duration-300 ease-in-out focus:shadow-md text-gray-950 dark:text-gray-50 ${
             errors.name &&
-            'shadow-red-500 focus:shadow-red-500 placeholder-red-500'
+            'shadow-red-500 dark:shadow-red-500 focus:shadow-red-500 placeholder-red-500'
           }`}
         />
         {errors.name && (
@@ -135,9 +135,9 @@ export default function ContactForm() {
               message: 'Email must not exceed 50 characters',
             },
           })}
-          className={`px-4 py-2 rounded-xl bg-transparent shadow outline-none transition-shadow duration-300 ease-in-out focus:shadow-md text-gray-950 ${
+          className={`px-4 py-2 rounded-xl bg-transparent shadow dark:shadow-gray-500 outline-none transition-shadow duration-300 ease-in-out focus:shadow-md text-gray-950 dark:text-gray-50 ${
             errors.email &&
-            'shadow-red-500 focus:shadow-red-500 placeholder-red-500'
+            'shadow-red-500 dark:shadow-red-500 focus:shadow-red-500 placeholder-red-500'
           }`}
         />
         {errors.email && (
@@ -165,9 +165,9 @@ export default function ContactForm() {
               message: 'Message must not exceed 500 characters',
             },
           })}
-          className={`px-4 py-2 rounded-xl bg-transparent shadow outline-none transition-shadow duration-300 ease-in-out focus:shadow-md text-gray-950 ${
+          className={`px-4 py-2 rounded-xl bg-transparent shadow dark:shadow-gray-500 outline-none transition-shadow duration-300 ease-in-out focus:shadow-md text-gray-950 dark:text-gray-50 ${
             errors.message &&
-            'shadow-red-500 focus:shadow-red-500 placeholder-red-500'
+            'shadow-red-500 dark:shadow-red-500 focus:shadow-red-500 placeholder-red-500'
           }`}
         />
         {errors.message && (
@@ -179,7 +179,7 @@ export default function ContactForm() {
       {showButton && (
         <button
           type="submit"
-          className="bg-gray-800 py-2 rounded-xl text-gray-50 text-base font-medium transition-colors duration-300 ease-in-out hover:bg-gray-950"
+          className="bg-gray-800 py-2 rounded-xl text-gray-50 text-base font-medium transition-colors duration-300 ease-in-out hover:bg-gray-950 dark:hover:bg-gray-700"
         >
           Send Message
         </button>

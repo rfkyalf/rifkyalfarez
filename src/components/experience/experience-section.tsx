@@ -6,7 +6,7 @@ import LoadingCard from './loading';
 
 export default function ExperienceSection() {
   return (
-    <section className="flex flex-col gap-4 border-b border-gray-200 pb-8">
+    <section className="flex flex-col gap-4 border-b border-gray-200 dark:border-gray-800 pb-8">
       <SectionHeader name="Experience" desc="My experience" Icon={FaSuitcase} />
       <Suspense fallback={<LoadingCard />}>
         <ExperienceCard />

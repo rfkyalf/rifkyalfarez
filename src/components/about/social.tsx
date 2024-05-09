@@ -37,9 +37,9 @@ export function Resume() {
     <Link href="/" className="group flex items-center gap-2" target="_blank">
       <FaFileLines
         size={25}
-        className="text-gray-800 h-5 w-5 md:h-7 md:w-7 group-hover:text-black"
+        className="text-gray-800 dark:text-gray-300 h-5 w-5 md:h-7 md:w-7 group-hover:text-black dark:group-hover:text-white"
       />
-      <span className="text-xs md:text-sm text-gray-800 group-hover:text-black group-hover:underline">
+      <span className="text-xs md:text-sm text-gray-800 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white group-hover:underline">
         Download Resume
       </span>
     </Link>

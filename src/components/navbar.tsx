@@ -4,6 +4,7 @@ import { navLinks } from '@/constants';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import ThemeSwitch from './darkmode-toggle';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -22,9 +23,9 @@ export default function Navbar() {
   return (
     <nav className="fixed top-2 flex justify-center w-full items-center z-50">
       <div
-        className={`flex px-8 py-2 gap-8 rounded-full transition-all duration-700 ease-in-out ${
+        className={`flex px-8 py-2 gap-4 md:gap-8 rounded-full transition-all duration-700 ease-in-out ${
           isScrolled
-            ? 'bg-white/50 backdrop-blur-lg shadow-md'
+            ? 'bg-white/50 dark:bg-black/50 backdrop-blur-lg shadow-md dark:shadow-gray-500'
             : 'bg-transparent'
         }`}
       >
@@ -34,15 +35,16 @@ export default function Navbar() {
             href={item.href}
             title={item.name}
             className={`${
-              pathname === item.href ? 'bg-gray-300' : ''
-            } hover:bg-gray-300 p-2 rounded-xl transition-colors duration-300 ease-in-out`}
+              pathname === item.href ? 'bg-gray-300 dark:bg-gray-700' : ''
+            } hover:bg-gray-300 dark:hover:bg-gray-700 p-2 rounded-xl transition-colors duration-300 ease-in-out`}
           >
             <item.icon
               size={22}
-              className="text-gray-950 w-5 h-5 md:w-6 md:h-6"
+              className="text-gray-950 dark:text-gray-50 w-5 h-5 md:w-6 md:h-6"
             />
           </Link>
         ))}
+        <ThemeSwitch />
       </div>
     </nav>
   );

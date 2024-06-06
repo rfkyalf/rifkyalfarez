@@ -3,10 +3,21 @@ import SectionHeader from '../section-header';
 import ProjectCard from './project-card';
 import LoadingCardProject from './loading';
 import { Suspense } from 'react';
+import { MotionSection } from '@/framer';
 
 export default function ProjectsSection() {
   return (
-    <section className="flex flex-col gap-4 border-b border-gray-200 dark:border-gray-800 pb-8">
+    <MotionSection
+      initial={{ opacity: 0, x: 95 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{
+        duration: 0.6,
+        ease: 'easeInOut',
+        type: 'spring',
+        delay: 0.4,
+      }}
+      className="flex flex-col gap-4 border-b border-gray-200 dark:border-gray-800 pb-8"
+    >
       <SectionHeader
         name="Projects"
         desc="Implementation of my skills into personal and real projects"
@@ -15,6 +26,6 @@ export default function ProjectsSection() {
       <Suspense fallback={<LoadingCardProject />}>
         <ProjectCard />
       </Suspense>
-    </section>
+    </MotionSection>
   );
 }

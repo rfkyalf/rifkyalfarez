@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="w-[350px] sm:w-[620px] md:w-[748px] xl:w-[880px] mx-auto mt-20 mb-8">
+    <div className="w-[350px] sm:w-[620px] md:w-[748px] xl:w-[880px] mx-auto mb-8">
       <MotionDiv
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

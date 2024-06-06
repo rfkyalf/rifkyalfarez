@@ -23,7 +23,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-2 flex justify-center w-full items-center z-50">
+    <nav className="sticky top-2 left-0 right-0 flex justify-center w-full items-center z-50 mb-8">
       <div
         className={`flex px-8 py-2 gap-4 md:gap-8 rounded-full transition-all duration-700 ease-in-out ${
           isScrolled

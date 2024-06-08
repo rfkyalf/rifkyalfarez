@@ -15,6 +15,7 @@ export default function NotFound() {
           />
         </div>
         <div>
+          <h1 className="text-2xl md:text-5xl font-bold mb-4">Oops...</h1>
           <h2 className="text-xl md:text-4xl font-bold">404 Not Found</h2>
           <p className="text-sm md:text-xl mb-8">
             The page you are looking for does not exist

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { PulseLoader } from 'react-spinners';
-import Alert from './alert';
+import { ToastError, ToastSuccess } from '@/components/contact/toast';
 
 interface FormInput {
   name: string;
@@ -12,8 +12,6 @@ interface FormInput {
 }
 
 export default function ContactForm() {
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showButton, setShowButton] = useState(true);
 
@@ -24,11 +22,6 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm<FormInput>();
 
-  const removeAlert = () => {
-    setSuccess(false);
-    setError(false);
-  };
-
   const botToken = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
 
@@ -36,7 +29,7 @@ export default function ContactForm() {
     try {
       setLoading(true);
       setShowButton(false);
-      const response = await fetch(
+      const res = await fetch(
         `https://api.telegram.org/bot${botToken}/sendMessage`,
         {
           method: 'POST',
@@ -49,16 +42,10 @@ export default function ContactForm() {
           }),
         }
       );
-      setSuccess(true);
-      setTimeout(() => {
-        setSuccess(false);
-      }, 5000);
+      ToastSuccess({ message: 'Success, your message sent successfully' });
       reset();
     } catch (error) {
-      setError(true);
-      setTimeout(() => {
-        setError(false);
-      }, 5000);
+      ToastError({ message: 'Something went wrong, please try again' });
     } finally {
       setLoading(false);
       setShowButton(true);
@@ -71,24 +58,6 @@ export default function ContactForm() {
       className="flex flex-col gap-4"
       noValidate
     >
-      {success && (
-        <Alert
-          bg="shadow-md shadow-green-400"
-          status="✅"
-          message="Success, your message sent successfully"
-          onClick={removeAlert}
-        />
-      )}
-
-      {error && (
-        <Alert
-          bg="shadow-md shadow-red-400"
-          status="❌"
-          message="Something went wrong, please try again"
-          onClick={removeAlert}
-        />
-      )}
-
       <div className="flex flex-col gap-1">
         <input
           type="text"

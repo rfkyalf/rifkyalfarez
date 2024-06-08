@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Providers } from '@/components/theme-providers';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,6 +18,7 @@ export const metadata: Metadata = {
     'rifky portfolio',
     'rifky alfarez website',
     'rifky alfarez portfolio',
+    'rifky tasikmalaya',
   ],
   title: {
     default: 'Rifky Alfarez | Frontend Developer',
@@ -41,6 +44,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           {children}
+          <ToastContainer />
         </Providers>
       </body>
     </html>

@@ -1,10 +1,8 @@
 import { FaCode } from 'react-icons/fa';
 
+import { MotionSection } from '@/lib/framer';
 import SectionHeader from '../section-header';
 import TechCard from './tech-card';
-import LoadingTechCard from './loading';
-import { Suspense } from 'react';
-import { MotionSection } from '@/lib/framer';
 
 export default function TechStacksSection() {
   return (
@@ -20,9 +18,7 @@ export default function TechStacksSection() {
         desc="The tech stack I use"
         Icon={FaCode}
       />
-      <Suspense fallback={<LoadingTechCard />}>
-        <TechCard />
-      </Suspense>
+      <TechCard />
     </MotionSection>
   );
 }

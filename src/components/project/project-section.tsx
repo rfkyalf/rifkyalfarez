@@ -3,7 +3,7 @@ import SectionHeader from '../section-header';
 import ProjectCard from './project-card';
 import LoadingCardProject from './loading';
 import { Suspense } from 'react';
-import { MotionSection } from '@/framer';
+import { MotionSection } from '@/lib/framer';
 
 export default function ProjectsSection() {
   return (

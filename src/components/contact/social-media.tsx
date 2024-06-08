@@ -1,4 +1,4 @@
-import { email, github, instagram, linkedin, whatsapp } from '@/constants';
+import { email, github, instagram, linkedin, whatsapp } from '@/lib/constants';
 import Link from 'next/link';
 import {
   FaEnvelope,

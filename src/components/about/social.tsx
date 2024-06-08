@@ -6,7 +6,7 @@ import {
   FaLinkedinIn,
 } from 'react-icons/fa6';
 
-export async function SocialMedia() {
+export function SocialMedia() {
   return (
     <div className="flex gap-4 items-center text-gray-800 dark:text-gray-300">
       <Link href="">

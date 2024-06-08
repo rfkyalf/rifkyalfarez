@@ -4,7 +4,7 @@ import SectionHeader from '../section-header';
 import TechCard from './tech-card';
 import LoadingTechCard from './loading';
 import { Suspense } from 'react';
-import { MotionSection } from '@/framer';
+import { MotionSection } from '@/lib/framer';
 
 export default function TechStacksSection() {
   return (

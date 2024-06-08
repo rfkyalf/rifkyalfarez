@@ -1,6 +1,6 @@
 import LoadingCardProject from '@/components/project/loading';
 import ProjectCard from '@/components/project/project-card';
-import { MotionDiv } from '@/framer';
+import { MotionDiv } from '@/lib/framer';
 import { Suspense } from 'react';
 
 export const metadata = {

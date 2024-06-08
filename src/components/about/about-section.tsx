@@ -1,7 +1,7 @@
-import { selfDescription } from '@/constants';
-import { MotionSection } from '@/framer';
-import { Resume, SocialMedia } from './social';
-import { Name } from './name';
+import { selfDescription } from '@/lib/constants';
+import { MotionSection } from '@/lib/framer';
+import { Resume, SocialMedia } from '@/components/about/social';
+import { Name } from '@/components/about/name';
 
 export default function AboutSection() {
   return (

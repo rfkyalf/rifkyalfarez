@@ -3,7 +3,7 @@ import SectionHeader from '../section-header';
 import ExperienceCard from './experience-card';
 import { Suspense } from 'react';
 import LoadingCard from './loading';
-import { MotionSection } from '@/framer';
+import { MotionSection } from '@/lib/framer';
 
 export default function ExperienceSection() {
   return (

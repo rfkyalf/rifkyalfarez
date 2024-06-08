@@ -1,7 +1,7 @@
 import { FaPaperPlane } from 'react-icons/fa6';
 import SectionHeader from '../section-header';
 import ContactForm from './contact-form';
-import { MotionSection } from '@/framer';
+import { MotionSection } from '@/lib/framer';
 
 export default function ContactSection() {
   return (

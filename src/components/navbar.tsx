@@ -1,10 +1,10 @@
 'use client';
 
-import { navLinks } from '@/constants';
+import ThemeSwitch from '@/components/darkmode-toggle';
+import { navLinks } from '@/lib/constants';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import ThemeSwitch from './darkmode-toggle';
 
 export default function Navbar() {
   const pathname = usePathname();

@@ -1,5 +1,5 @@
 import BackButton from '@/components/back-button';
-import { MotionDiv } from '@/framer';
+import { MotionDiv } from '@/lib/framer';
 import { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
 

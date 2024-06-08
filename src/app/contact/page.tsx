@@ -1,6 +1,6 @@
 import ContactForm from '@/components/contact/contact-form';
 import LetsConnect from '@/components/contact/social-media';
-import { MotionDiv } from '@/framer';
+import { MotionDiv } from '@/lib/framer';
 
 export const metadata = {
   title: 'Contact',

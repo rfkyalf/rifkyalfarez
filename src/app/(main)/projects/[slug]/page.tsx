@@ -1,26 +1,42 @@
 import BackButton from '@/components/back-button';
 import { getProject } from '@/lib/data';
 import { MotionDiv } from '@/lib/framer';
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
-export async function generateMetadata(
-  {
-    params,
-  }: {
-    params: { slug: string };
-  },
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const project = await getProject(params.slug);
-  const previousImages = (await parent).openGraph?.images || [];
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata | undefined> {
+  const project = await getProject(params?.slug);
+
+  if (!project) {
+    return {
+      title: {
+        absolute: '404 - Project not found',
+      },
+      description: 'Project not found',
+    };
+  }
 
   return {
-    title: `${project?.name}`,
-    description: `${project?.desc}`,
+    title: project.name,
+    description: project.desc,
     openGraph: {
-      images: [`${project?.image}`, ...previousImages],
+      title: project.name,
+      description: project.desc,
+      type: 'website',
+      locale: 'id_ID',
+      url: `${process.env.BASE_URL}/projects/${project.slug}`,
+      siteName: 'Rifky Alfarez',
+      images: [
+        {
+          url: project.image,
+        },
+      ],
     },
   };
 }
@@ -31,6 +47,8 @@ export default async function DetailProjectPage({
   params: { slug: string };
 }) {
   const project = await getProject(params.slug);
+
+  if (!project) return notFound();
 
   return (
     <MotionDiv

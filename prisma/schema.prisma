@@ -11,6 +11,7 @@ model Project {
   id                 String     @id    @default(cuid())
   image              String
   name               String
+  slug               String?     @unique
   desc               String
   repoUrl            String?
   demoUrl            String?

@@ -3,11 +3,6 @@ import Image from 'next/image';
 import { getExperiences } from '@/lib/data';
 
 export default async function ExperienceCard() {
-  // const res = await fetch(`${process.env.API_URL}api/experiences`, {
-  //   cache: 'force-cache',
-  // });
-  // const experience = await res.json();
-
   const experiences = await getExperiences();
 
   if (experiences.length === 0) {

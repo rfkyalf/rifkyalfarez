@@ -15,11 +15,11 @@ export const getProjects = async () => {
   }
 };
 
-export const getProject = async (id: string) => {
+export const getProject = async (slug: string) => {
   try {
     const project = await prisma.project.findUnique({
       where: {
-        id,
+        slug,
       },
       include: {
         techStacks: true,

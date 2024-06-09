@@ -3,16 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default async function ProjectCard() {
-  // const res = await fetch(`${process.env.API_URL}api/projects`, {
-  //   cache: 'force-cache',
-  // });
-
-  // const project = await res.json();
-
-  // if (project.length === 0) {
-  //   return <p>No project found.</p>;
-  // }
-
   const projects = await getProjects();
 
   if (projects.length === 0) {
@@ -24,7 +14,7 @@ export default async function ProjectCard() {
       {projects.map((project) => (
         <Link
           key={project.id}
-          href={`/projects/${project.id}`}
+          href={`/projects/${project.slug}`}
           className="flex flex-col shadow-md dark:shadow-gray-500 rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
         >
           <Image

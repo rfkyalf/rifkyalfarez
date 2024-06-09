@@ -1,31 +1,19 @@
 import BackButton from '@/components/back-button';
 import { getProject } from '@/lib/data';
 import { MotionDiv } from '@/lib/framer';
-import { Project } from '@prisma/client';
 import { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-
-// const getProject = async (id: string) => {
-//   try {
-//     const res = await fetch(`${process.env.API_URL}api/projects/${id}`, {
-//       cache: 'force-cache',
-//     });
-//     return await res.json();
-//   } catch (error) {
-//     throw new Error('Failed to fetch project');
-//   }
-// };
 
 export async function generateMetadata(
   {
     params,
   }: {
-    params: { id: string };
+    params: { slug: string };
   },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const project = await getProject(params.id);
+  const project = await getProject(params.slug);
   const previousImages = (await parent).openGraph?.images || [];
 
   return {
@@ -40,11 +28,9 @@ export async function generateMetadata(
 export default async function DetailProjectPage({
   params,
 }: {
-  params: { id: string };
+  params: { slug: string };
 }) {
-  //   const project = await getProject(params.id);
-
-  const project = await getProject(params.id);
+  const project = await getProject(params.slug);
 
   return (
     <MotionDiv

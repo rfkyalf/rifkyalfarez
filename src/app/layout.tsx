@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.BASE_URL}`),
+  verification: {
+    google: 'b0J4NqD2m6Y_-S1QAAOFGeQ_vZ2IEQl3PUt9tDfUUK8',
+  },
   keywords: [
     'rifky',
     'rifky alfarez',

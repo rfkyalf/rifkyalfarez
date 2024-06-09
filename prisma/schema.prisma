@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id                 String     @id    @default(cuid())
+  image              String
+  name               String
+  desc               String
+  repoUrl            String?
+  demoUrl            String?
+
+  techStacks         TechStack[]
+
+  
+  createdAt          DateTime   @default(now())
+  updatedAt          DateTime   @updatedAt
+}
+
+model TechStack {
+  id                 String     @id    @default(cuid())
+  name               String
+  icon               String
+
+  projects           Project[]
+}
+
+model Experience {
+  id                 String     @id    @default(cuid())
+  image              String
+  name               String
+  role               String
+  desc               String?
+  date               String
+}

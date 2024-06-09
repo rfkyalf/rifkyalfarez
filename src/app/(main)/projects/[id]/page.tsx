@@ -1,18 +1,21 @@
 import BackButton from '@/components/back-button';
+import { getProject } from '@/lib/data';
 import { MotionDiv } from '@/lib/framer';
+import { Project } from '@prisma/client';
 import { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const getProject = async (id: string) => {
-  try {
-    const res = await fetch(`${process.env.API_URL}api/projects/${id}`, {
-      cache: 'force-cache',
-    });
-    return await res.json();
-  } catch (error) {
-    throw new Error('Failed to fetch project');
-  }
-};
+// const getProject = async (id: string) => {
+//   try {
+//     const res = await fetch(`${process.env.API_URL}api/projects/${id}`, {
+//       cache: 'force-cache',
+//     });
+//     return await res.json();
+//   } catch (error) {
+//     throw new Error('Failed to fetch project');
+//   }
+// };
 
 export async function generateMetadata(
   {
@@ -34,7 +37,13 @@ export async function generateMetadata(
   };
 }
 
-export default async function DetailProjectPage({ params }: any) {
+export default async function DetailProjectPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  //   const project = await getProject(params.id);
+
   const project = await getProject(params.id);
 
   return (
@@ -49,8 +58,8 @@ export default async function DetailProjectPage({ params }: any) {
       </div>
       <div>
         <Image
-          src={project?.image}
-          alt={project?.name}
+          src={project?.image || '/no-image.png'}
+          alt={project?.name || 'no image'}
           width={1000}
           height={1000}
           className="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover shadow-md rounded-xl"
@@ -60,12 +69,12 @@ export default async function DetailProjectPage({ params }: any) {
         <div className="flex gap-2 items-center">
           <p>Tech stack:</p>
           <div className="flex gap-1">
-            {project?.tech?.map((item: any) => (
+            {project?.techStacks?.map((tech) => (
               <Image
-                key={item?._id}
-                src={item?.tech_image}
-                alt={item?.tech_name}
-                title={item?.tech_name}
+                key={tech.id}
+                src={tech.icon}
+                alt={tech.name}
+                title={tech.name}
                 width={1000}
                 height={1000}
                 className="object-contain h-5 w-5"
@@ -74,8 +83,12 @@ export default async function DetailProjectPage({ params }: any) {
           </div>
         </div>
         <div className="flex items-center gap-4 md:gap-8">
-          <p>Code</p>
-          <p>Demo</p>
+          <Link href={project?.demoUrl || '#'} target="_blank">
+            Demo
+          </Link>
+          <Link href={project?.repoUrl || '#'} target="_blank">
+            Code
+          </Link>
         </div>
       </div>
       <div className="mt-8 space-y-2">

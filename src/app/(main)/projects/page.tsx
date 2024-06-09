@@ -23,12 +23,12 @@ export default function ProjectsPage() {
           ease: 'easeInOut',
           type: 'spring',
         }}
-        className="border-b border-gray-200 dark:border-gray-800 pb-2"
+        className="border-b border-neutral-200 dark:border-neutral-800 pb-2"
       >
-        <h1 className="text-gray-950 dark:text-gray-50 text-xl md:text-2xl  xl:text-3xl font-bold">
+        <h1 className="text-neutral-950 dark:text-neutral-50 text-xl md:text-2xl  xl:text-3xl font-bold">
           Projects
         </h1>
-        <p className="text-sm md:text-base text-gray-800 dark:text-gray-300">
+        <p className="text-sm md:text-base text-neutral-800 dark:text-neutral-300">
           Implementation of my skills into personal and real projects
         </p>
       </MotionDiv>

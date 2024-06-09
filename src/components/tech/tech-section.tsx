@@ -11,7 +11,7 @@ export default function TechStacksSection() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 2, ease: 'easeInOut', type: 'spring' }}
       viewport={{ once: true }}
-      className="flex flex-col gap-4 border-b border-gray-200 dark:border-gray-800 pb-8"
+      className="flex flex-col gap-4 border-b border-neutral-200 dark:border-neutral-800 pb-8"
     >
       <SectionHeader
         name="Tech Stack"

@@ -39,19 +39,19 @@ export default async function DetailProjectPage({
       transition={{ duration: 1, ease: 'easeInOut', type: 'spring' }}
       className="w-[350px] sm:w-[620px] md:w-[748px] xl:w-[880px] mx-auto my-8"
     >
-      <div className="mb-8 text-sm md:text-base font-semibold text-gray-700 dark:text-gray-300">
+      <div className="mb-8 text-sm md:text-base font-semibold text-neutral-700 dark:text-neutral-300">
         <BackButton />
       </div>
       <div>
         <Image
           src={project?.image || '/no-image.png'}
-          alt={project?.name || 'no image'}
+          alt={project?.name || 'No image'}
           width={1000}
           height={1000}
           className="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover shadow-md rounded-xl"
         />
       </div>
-      <div className="flex justify-between items-center text-sm text-gray-800 dark:text-gray-300 mt-4">
+      <div className="flex justify-between items-center text-sm text-neutral-800 dark:text-neutral-300 mt-4">
         <div className="flex gap-2 items-center">
           <p>Tech stack:</p>
           <div className="flex gap-1">
@@ -78,10 +78,10 @@ export default async function DetailProjectPage({
         </div>
       </div>
       <div className="mt-8 space-y-2">
-        <h1 className="textgray-950 text-xl md:text-2xl font-bold text-gray-950 dark:text-gray-50">
+        <h1 className="text-xl md:text-2xl font-bold text-neutral-950 dark:text-neutral-50">
           {project?.name}
         </h1>
-        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 text-justify leading-loose">
+        <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 text-justify leading-loose">
           {project?.desc}
         </p>
       </div>

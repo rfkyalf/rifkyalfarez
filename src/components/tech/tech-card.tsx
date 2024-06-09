@@ -7,7 +7,7 @@ export default function TechCard() {
       {techStack.map((tech, index) => (
         <div
           key={index}
-          className="shadow-md dark:shadow-gray-500 md:h-56 p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
+          className="shadow-md dark:shadow-neutral-500 md:h-56 p-4 rounded-xl relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
         >
           <Image
             src={tech.bgImage}
@@ -23,7 +23,7 @@ export default function TechCard() {
             height={1000}
             className="h-40 w-40 absolute -top-5 -left-5 -z-10 opacity-5"
           />
-          <h1 className="mb-4 text-base font-semibold text-gray-950 dark:text-gray-50">
+          <h1 className="mb-4 text-base font-semibold text-neutral-950 dark:text-neutral-50">
             {tech.name}
           </h1>
           <div className="grid grid-cols-2 justify-items-center content-center gap-8">

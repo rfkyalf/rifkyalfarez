@@ -27,7 +27,7 @@ export default function Navbar() {
       <div
         className={`flex px-8 py-2 gap-4 md:gap-8 rounded-full transition-all duration-700 ease-in-out ${
           isScrolled
-            ? 'bg-white/50 dark:bg-black/50 backdrop-blur-lg shadow-md dark:shadow-gray-500'
+            ? 'bg-white/50 dark:bg-black/50 backdrop-blur-lg shadow-md dark:shadow-neutral-500'
             : 'bg-transparent'
         }`}
       >
@@ -37,12 +37,12 @@ export default function Navbar() {
             href={item.href}
             title={item.name}
             className={`${
-              pathname === item.href ? 'bg-gray-300 dark:bg-gray-700' : ''
-            } hover:bg-gray-300 dark:hover:bg-gray-700 p-2 rounded-xl transition-colors duration-300 ease-in-out`}
+              pathname === item.href ? 'bg-neutral-300 dark:bg-neutral-700' : ''
+            } hover:bg-neutral-300 dark:hover:bg-neutral-700 p-2 rounded-xl transition-colors duration-300 ease-in-out`}
           >
             <item.icon
               size={22}
-              className="text-gray-950 dark:text-gray-50 w-5 h-5 md:w-6 md:h-6"
+              className="text-neutral-950 dark:text-neutral-50 w-5 h-5 md:w-6 md:h-6"
             />
           </Link>
         ))}

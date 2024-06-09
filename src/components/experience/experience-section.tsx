@@ -16,7 +16,7 @@ export default function ExperienceSection() {
         type: 'spring',
         delay: 0.2,
       }}
-      className="flex flex-col gap-4 border-b border-gray-200 dark:border-gray-800 pb-8"
+      className="flex flex-col gap-4 border-b border-neutral-200 dark:border-neutral-800 pb-8"
     >
       <SectionHeader name="Experience" desc="My experience" Icon={FaSuitcase} />
       <Suspense fallback={<LoadingCard />}>

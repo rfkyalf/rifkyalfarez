@@ -61,7 +61,7 @@ export function SocialMedia({
       <Link
         href={href}
         target="_blank"
-        className={`px-4 py-2 rounded-md text-white flex items-center justify-center shadow dark:shadow-gray-500 gap-2 text-sm md:text-base font-semibold trasition-color duration-300 ease-in-out ${color}`}
+        className={`px-4 py-2 rounded-md text-white flex items-center justify-center shadow dark:shadow-neutral-500 gap-2 text-sm md:text-base font-semibold trasition-color duration-300 ease-in-out ${color}`}
       >
         <Icon size={20} />
         {name}

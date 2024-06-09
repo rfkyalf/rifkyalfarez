@@ -18,12 +18,12 @@ export default function ContactPage() {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: 'easeInOut', type: 'spring' }}
-        className="border-b border-gray-200 dark:border-gray-800 pb-2"
+        className="border-b border-neutral-200 dark:border-neutral-800 pb-2"
       >
-        <h1 className="text-gray-950 dark:text-gray-50 text-xl md:text-2xl  xl:text-3xl font-bold">
+        <h1 className="text-neutral-950 dark:text-neutral-50 text-xl md:text-2xl  xl:text-3xl font-bold">
           Contact Me
         </h1>
-        <p className="text-sm md:text-base text-gray-800 dark:text-gray-300">
+        <p className="text-sm md:text-base text-neutral-800 dark:text-neutral-300">
           Get in touch with me
         </p>
       </MotionDiv>
@@ -33,7 +33,7 @@ export default function ContactPage() {
         transition={{ duration: 1, ease: 'easeInOut', type: 'spring' }}
         className="mt-8"
       >
-        <h1 className="text-gray-950 dark:text-gray-50 text-base md:text-xl font-bold">
+        <h1 className="text-neutral-950 dark:text-neutral-50 text-base md:text-xl font-bold">
           Lets Connect
         </h1>
         <LetsConnect />
@@ -44,7 +44,7 @@ export default function ContactPage() {
         transition={{ duration: 1, ease: 'easeInOut', type: 'spring' }}
         className="mt-8"
       >
-        <h1 className="text-gray-950 dark:text-gray-50 text-base md:text-xl font-bold mb-4">
+        <h1 className="text-neutral-950 dark:text-neutral-50 text-base md:text-xl font-bold mb-4">
           Send Me a Message
         </h1>
         <ContactForm />

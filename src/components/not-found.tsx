@@ -21,13 +21,20 @@ export default function NotFoundComponents() {
           />
         </div>
         <div>
-          <h1 className="text-2xl md:text-5xl font-bold mb-8">Oops...</h1>
-          <h2 className="text-xl md:text-4xl font-bold">Page Not Found</h2>
-          <p className="text-sm md:text-xl mb-8">
+          <h1 className="text-2xl md:text-5xl font-bold mb-8 text-neutral-950 dark:text-neutral-50">
+            Oops...
+          </h1>
+          <h2 className="text-xl md:text-4xl font-bold text-neutral-950 dark:text-neutral-50">
+            Page Not Found
+          </h2>
+          <p className="text-sm md:text-xl mb-8 text-neutral-700 dark:text-neutral-300">
             <span className="text-red-500 font-semibold">{pathname}</span> page
             is doesn&apos;t exist
           </p>
-          <Link href="/" className="underline text-xs md:text-base">
+          <Link
+            href="/"
+            className="underline text-xs md:text-base text-neutral-800 dark:text-neutral-200"
+          >
             Return Home
           </Link>
         </div>

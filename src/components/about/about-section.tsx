@@ -9,13 +9,13 @@ export default function AboutSection() {
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, ease: 'easeInOut', type: 'spring' }}
-      className="flex flex-col gap-4 border-b border-gray-200 dark:border-gray-800 pb-8"
+      className="flex flex-col gap-4 border-b border-neutral-200 dark:border-neutral-800 pb-8"
     >
       <Name />
-      <p className="text-sm md:text-base text-gray-800 dark:text-gray-300 text-justify">
+      <p className="text-sm md:text-base text-neutral-800 dark:text-neutral-300 text-justify">
         {selfDescription}
       </p>
-      <div className="flex justify-between ">
+      <div className="flex justify-between">
         <SocialMedia />
         <Resume />
       </div>

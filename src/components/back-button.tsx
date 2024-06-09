@@ -11,8 +11,11 @@ export default function BackButton() {
         onClick={() => router.back()}
         className="flex gap-2 items-center group"
       >
-        <IoArrowBackCircleOutline size={25} className="w-5 h-5 md:h-6 md:w-6" />
-        <p className="transition-transform duration-300 ease-in-out group-hover:translate-x-2">
+        <IoArrowBackCircleOutline
+          size={25}
+          className="w-5 h-5 md:h-6 md:w-6 text-neutral-800 dark:text-neutral-300"
+        />
+        <p className="text-neutral-800 dark:text-neutral-300 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
           Back
         </p>
       </button>

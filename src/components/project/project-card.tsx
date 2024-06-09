@@ -15,7 +15,7 @@ export default async function ProjectCard() {
         <Link
           key={project.id}
           href={`/projects/${project.slug}`}
-          className="flex flex-col shadow-md dark:shadow-gray-500 rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
+          className="flex flex-col shadow-md dark:shadow-neutral-500 rounded-xl overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
         >
           <Image
             src={project.image}
@@ -25,10 +25,10 @@ export default async function ProjectCard() {
             className="w-full h-[150px] md:h-[200px] object-cover"
           />
           <div className="px-6 py-4">
-            <h1 className="text-gray-950 dark:text-gray-50 text-base font-semibold">
+            <h1 className="text-neutral-950 dark:text-neutral-50 text-base font-semibold">
               {project.name}
             </h1>
-            <p className="text-sm text-gray-800 dark:text-gray-300 text-justify">
+            <p className="text-sm text-neutral-800 dark:text-neutral-300 text-justify">
               {project.desc.substring(0, 80)}...
             </p>
             <div className="flex items-center gap-1 mt-4">

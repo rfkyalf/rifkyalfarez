@@ -7,7 +7,6 @@ export const metadata = {
   description: 'Get in touch with me',
   openGraph: {
     description: 'Get in touch with me',
-    images: `${process.env.BASE_URL}/contact/opengraph-image.png`,
   },
 };
 

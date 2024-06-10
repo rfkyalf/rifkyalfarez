@@ -3,7 +3,6 @@ export const metadata = {
   description: 'Get to know more about me',
   openGraph: {
     description: 'Get to know more about me',
-    // images: `${process.env.BASE_URL}/about/opengraph-image.png`,
   },
 };
 

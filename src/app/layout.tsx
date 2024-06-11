@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     template: '%s - Rifky Alfarez',
   },
   description:
-    'Hi! I am Rifky Alfarez, an 8th semester student majoring in Informatics. I have a big interest in frontend development and currently focusing on React.js and Next.js. Besides that, I also have a basic understanding of Node.js, Express.js, and Prisma.',
+    'Students majoring in informatics who have an interest in the field of Frontend Developer, with skills in HTML, CSS, JavaScript, and frameworks such as React and Next.js.',
   openGraph: {
     title: 'Rifky Alfarez | Frontend Developer',
     description:
-      'Hi! I am Rifky Alfarez, an 8th semester student majoring in Informatics. I have a big interest in frontend development and currently focusing on React.js and Next.js. Besides that, I also have a basic understanding of Node.js, Express.js, and Prisma.',
+      'Students majoring in informatics who have an interest in the field of Frontend Developer, with skills in HTML, CSS, JavaScript, and frameworks such as React and Next.js.',
     images: '/opengraph-image.png',
     type: 'website',
     siteName: 'Rifky Alfarez',

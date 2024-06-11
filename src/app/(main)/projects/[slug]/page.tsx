@@ -27,7 +27,7 @@ export async function generateMetadata({
     description: project.desc,
     openGraph: {
       title: project.name,
-      description: project.desc,
+      description: project.metaDesc || project.desc,
       type: 'website',
       locale: 'id_ID',
       url: `${process.env.BASE_URL}/projects/${project.slug}`,

@@ -1,8 +1,10 @@
 export const metadata = {
   title: 'About',
-  description: 'Get to know more about me',
+  description:
+    'Discover my background, skills, and experiences in frontend development, and what drives my passion for creating engaging user interfaces.',
   openGraph: {
-    description: 'Get to know more about me',
+    description:
+      'Discover my background, skills, and experiences in frontend development, and what drives my passion for creating engaging user interfaces.',
   },
 };
 

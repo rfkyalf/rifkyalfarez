@@ -4,9 +4,11 @@ import { MotionDiv } from '@/lib/framer';
 
 export const metadata = {
   title: 'Contact',
-  description: 'Get in touch with me',
+  description:
+    'Get in touch with me for collaborations, inquiries, or any questions you may have. I look forward to connecting and discussing potential opportunities or projects.',
   openGraph: {
-    description: 'Get in touch with me',
+    description:
+      'Get in touch with me for collaborations, inquiries, or any questions you may have. I look forward to connecting and discussing potential opportunities or projects.',
   },
 };
 

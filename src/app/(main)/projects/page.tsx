@@ -5,9 +5,11 @@ import { Suspense } from 'react';
 
 export const metadata = {
   title: 'Projects',
-  description: 'Implementation of my skills into personal and real projects',
+  description:
+    'Showcasing the implementation of my skills through a variety of personal and real-world projects, highlighting expertise in frontend development using React, and Next.js.',
   openGraph: {
-    description: 'Implementation of my skills into personal and real projects',
+    description:
+      'Showcasing the implementation of my skills through a variety of personal and real-world projects, highlighting expertise in frontend development using React, and Next.js.',
   },
 };
 

@@ -16,6 +16,8 @@ model Project {
   repoUrl            String?
   demoUrl            String?
 
+  metaDesc           String?
+
   techStacks         TechStack[]
 
   
